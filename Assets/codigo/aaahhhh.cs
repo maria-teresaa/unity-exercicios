@@ -12,6 +12,14 @@ public class aaahhhh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        grossao.linearVelocity=new Vector3(0,0,10f);
+        grossao.AddForce(0,0,1);
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+           grossao.AddForce(-55,0,0); 
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            grossao.AddForce(55,0,0);
+        }
     }
 }
