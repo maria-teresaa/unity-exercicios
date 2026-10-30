@@ -6,6 +6,7 @@ TagManager:
   tags:
   - barreiras
   - moedas
+  - fim
   layers:
   - Default
   - TransparentFX

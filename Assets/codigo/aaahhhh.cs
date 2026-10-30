@@ -12,7 +12,7 @@ public class aaahhhh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        grossao.AddForce(0,0,1);
+        grossao.AddForce(0,0,25);
         if(Input.GetKeyDown(KeyCode.A))
         {
            grossao.AddForce(-55,0,0); 
@@ -21,6 +21,11 @@ public class aaahhhh : MonoBehaviour
         {
             grossao.AddForce(55,0,0);
         }
+        if (transform.position.y < 0)
+        {
+            FindAnyObjectByType<controlador>().reiniciar();
+        }
+        
     }
     private void OnCollisionEnter (Collision barreira)
     {
@@ -32,6 +37,10 @@ public class aaahhhh : MonoBehaviour
                 FindAnyObjectByType<controlador>().reiniciar();
             }
             som.PlayOneShot(mau);
+        }
+        if (barreira.gameObject.tag == "fim")
+        {
+            FindAnyObjectByType<controlador>().passou();
         }
     }
     private void OnTriggerEnter (Collider moeda)
