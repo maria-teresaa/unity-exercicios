@@ -1,15 +1,16 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class controlador : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void reiniciar()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("nivel 1");
+        SceneManager.LoadScene(1);
     }
     public void passou()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("nivel 2");
+       SceneManager.LoadScene(2);
     }
 }
